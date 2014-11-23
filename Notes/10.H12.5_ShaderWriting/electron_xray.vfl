@@ -1,0 +1,21 @@
+#pragma hint colour color
+#pragma hint xray toggle
+
+surface electron_xray(int xray = 0; vector colour = {0.2,0.8,0.6};)
+
+{
+
+float edge = 1-abs(dot(normalize(N),normalize(I)));
+
+if (xray == 0)
+  {
+    Of = 1;
+  }
+else
+  {
+    Of = 1 * edge;
+  }
+  
+Cf = colour * edge;
+
+}

@@ -1,0 +1,73 @@
+// Magic: a6e11005
+// Automatically generated PSI dialog (PSI version 13.0.376)
+// Tue Apr 29 10:39:18 2014
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+paintdisplay.gad = ROW
+{
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("paintdisplay", "Paint with Display Node") toggle VALUE(paintdisplay.val);
+
+}
+
+lmb.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center)
+
+    PARM_LABEL_SIMPLE("Left Mouse", "lmb") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    lmb.menu;
+
+}
+
+mmb.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center)
+
+    PARM_LABEL_SIMPLE("Middle Mouse", "mmb") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    mmb.menu;
+
+}
+
+forcevisualize.gad = ROW
+{
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("forcevisualize", "Force Visualization") toggle VALUE(forcevisualize.val);
+
+}
+
+# warning cpp warning: "Templates/GenV3/subdialog.top.ui":5 Macro "PARMSPACING" redefined.  Using later definition
+# warning cpp warning: "Templates/GenV3/subdialog.top.ui":6 Macro "LAYOUTDIR" redefined.  Using later definition
+# warning cpp warning: "Templates/GenV3/subdialog.top.ui":7 Macro "LOOK_PLAIN" redefined.  Using later definition
+# warning cpp warning: "Templates/GenV3/subdialog.top.ui":8 Macro "DO_JUSTIFY" redefined.  Using later definition
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    paintdisplay.gad; 
+    lmb.gad; 
+    mmb.gad; 
+    forcevisualize.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

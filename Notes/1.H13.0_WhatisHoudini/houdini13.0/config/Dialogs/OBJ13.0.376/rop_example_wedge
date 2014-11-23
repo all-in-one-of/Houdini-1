@@ -1,0 +1,132 @@
+// Magic: 7b65e68d
+// Automatically generated PSI dialog (PSI version 13.0.376)
+// Mon Apr 28 12:57:13 2014
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+keeppos.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+keeppos.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+keeppos.gad = NULL { }
+pre_xform.gad = NULL { }
+}	
+}	// Template join.bot
+
+xOrd.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+xOrd.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+xOrd.gad = NULL { }
+rOrd.gad = NULL { }
+}	
+}	// Template join.bot
+
+t.gad = NULL { }
+r.gad = NULL { }
+s.gad = NULL { }
+p.gad = NULL { }
+scale.gad = NULL { }
+lookatpath.gad = NULL { }
+lookup.gad = NULL { }
+pathobjpath.gad = NULL { }
+roll.gad = NULL { }
+pos.gad = NULL { }
+uparmtype.gad = NULL { }
+pathorient.gad = NULL { }
+up.gad = NULL { }
+bank.gad = NULL { }
+shop_materialpath.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+shop_materialpath.gad = NULL { }
+shop_materialopts.gad = NULL { }
+}	// Template join.bot
+
+tdisplay.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+tdisplay.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+tdisplay.gad = NULL { }
+display.gad = NULL { }
+}	
+}	// Template join.bot
+
+vm_phantom.gad = NULL { }
+vm_renderable.gad = NULL { }
+categories.gad = NULL { }
+reflectmask.gad = NULL { }
+refractmask.gad = NULL { }
+lightmask.gad = NULL { }
+vm_volumefilter.gad = NULL { }
+vm_volumefilterwidth.gad = NULL { }
+vm_matte.gad = NULL { }
+vm_rayshade.gad = NULL { }
+geo_velocityblur.gad = NULL { }
+vm_shadingquality.gad = NULL { }
+vm_rayshadingquality.gad = NULL { }
+vm_flatness.gad = NULL { }
+vm_raypredice.gad = NULL { }
+vm_curvesurface.gad = NULL { }
+vm_rmbackface.gad = NULL { }
+shop_geometrypath.gad = NULL { }
+vm_forcegeometry.gad = NULL { }
+vm_rendersubd.gad = NULL { }
+vm_renderpoints.gad = NULL { }
+vm_usenforpoints.gad = NULL { }
+vm_metavolume.gad = NULL { }
+vm_coving.gad = NULL { }
+vm_computeN.gad = NULL { }
+vm_overridedetail.gad = NULL { }
+use_dcolor.gad = NULL { }
+dcolor.gad = NULL { }
+picking.gad = NULL { }
+pickscript.gad = NULL { }
+caching.gad = NULL { }
+vport_shadeopen.gad = NULL { }
+vport_displayassubdiv.gad = NULL { }
+renderable.gad = NULL { }
+
+folder0.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG
+    { 
+	VALUE(folder0.gad.val) STRETCH(1,0)
+    } 
+}
+
+stdswitcher5.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG
+    { 
+	VALUE(stdswitcher5.gad.val) STRETCH(1,0)
+    } 
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    renderable.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

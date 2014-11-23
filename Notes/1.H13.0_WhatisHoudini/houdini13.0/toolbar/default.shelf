@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="SideFX::toonsimple" orbolt="True" label="Toon Simple" icon="SideFX__toonsimple-icon.png">
+    <helpText><![CDATA[Install or download the Toon Simple Orbolt digital asset.]]></helpText>
+    <helpURL>http://www.orbolt.com/asset/SideFX::toonsimple</helpURL>
+    <script scriptType="python"><![CDATA[import shelfutils
+shelfutils.installOrboltAsset(kwargs, "SideFX::toonsimple", "http://www.orbolt.com/asset/SideFX::toonsimple")]]></script>
+  </tool>
+
+  <toolshelf name="autorigs" label="Auto Rigs">
+    <memberTool name="object_toon_character"/>
+    <memberTool name="object_biped_auto_rig"/>
+    <memberTool name="object_quadruped_auto_rigs"/>
+    <memberTool name="object_createautorig"/>
+    <memberTool name="object_reconnectpart"/>
+    <memberTool name="object_auto_rig_character_placer"/>
+    <memberTool name="object_auto_rig_biped_spines"/>
+    <memberTool name="object_auto_rig_biped_arm"/>
+    <memberTool name="object_auto_rig_biped_head_and_neck"/>
+    <memberTool name="object_auto_rig_biped_hands"/>
+    <memberTool name="object_auto_rig_biped_leg"/>
+    <memberTool name="object_auto_rig_quadruped_ik_spine"/>
+    <memberTool name="object_auto_rig_quadruped_front_leg"/>
+    <memberTool name="object_auto_rig_quadruped_back_leg"/>
+    <memberTool name="object_auto_rig_quadruped_head_and_neck"/>
+    <memberTool name="object_auto_rig_quadruped_toes"/>
+    <memberTool name="object_auto_rig_quadruped_tail"/>
+    <memberTool name="SideFX::toonsimple"/>
+  </toolshelf>
+
+  <shelfSet name="shelf_set_3" label="New Shelf Set">
+    <memberToolshelf name="my_shelf"/>
+    <memberToolshelf name="animation"/>
+    <memberToolshelf name="autorigs"/>
+    <memberToolshelf name="character"/>
+    <memberToolshelf name="cloth_dynamics"/>
+    <memberToolshelf name="cloud"/>
+    <memberToolshelf name="volume_tools_dynamics"/>
+    <memberToolshelf name="create"/>
+    <memberToolshelf name="deform"/>
+    <memberToolshelf name="drive_simulation"/>
+    <memberToolshelf name="cloth_dynamics"/>
+    <memberToolshelf name="volume_creation_dynamics"/>
+    <memberToolshelf name="fur"/>
+    <memberToolshelf name="lights_and_cameras"/>
+    <memberToolshelf name="model"/>
+    <memberToolshelf name="modify"/>
+    <memberToolshelf name="ocean"/>
+    <memberToolshelf name="liquid_dynamics"/>
+    <memberToolshelf name="particles"/>
+    <memberToolshelf name="polygon"/>
+    <memberToolshelf name="volume_sourcing_dynamics"/>
+    <memberToolshelf name="pyro_dynamics"/>
+    <memberToolshelf name="rbd_dynamics"/>
+    <memberToolshelf name="solid_dynamics"/>
+    <memberToolshelf name="tdtools"/>
+    <memberToolshelf name="texture"/>
+    <memberToolshelf name="volume"/>
+    <memberToolshelf name="wire_dynamics"/>
+  </shelfSet>
+
+  <toolshelf name="my_shelf" label="My Shelf"/>
+</shelfDocument>

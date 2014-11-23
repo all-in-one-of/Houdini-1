@@ -1,0 +1,50 @@
+fullscreen   -1
+playbarshown 1
+playbar      2
+shelf        2
+menubar      -1
+statusbar    2
+root {
+    split 0.5 H {
+        tabs 0 1 {
+            pane pane1 -a 0 -l 1 -H /obj/ -T OBJ -m neteditor
+            pane panetab2 -a 0 -l 0 -H /obj/ -T OBJ -m materialpalette
+        }
+        tabs 1 1 {
+            pane panetab1 -a 0 -l 0 -H /obj/ -T OBJ -m sceneview
+            pane panetab3 -a 0 -l 1 -H /obj/ -T OBJ -m contextview
+        }
+    }
+}
+shelfdock -o 0 -l icon_and_text -G 0.50 add shelf_set_3
+neteditor -G 0.75 -T 0.375 -K 0.3 -p 0 -c 0 -o 0 -n 1 -s 2 -x 0 -w 0 -k 0 -I 0 -B 1 -D 1 -L 0 -P 1 -S user -t comments subnet none -g 1 -a 1 -y 0.5 -m e -r 0.2 0.2 -N 1 -H 0.22 -V 0.22 pane1
+netviewdep -l 0 -c 0 -C 0 -e 0 -E 0 -b 0 -S 0 -s 3 -t 0 pane1
+netcolumns -c display,xray,select,origin,capture,bone -n OBJ pane1
+netcolumns -c display,render,template,selectabletemplate,highlight,unload,bypass,lock -n SOP pane1
+netcolumns -c delscript,comment -n PART pane1
+netcolumns -c display,render,template,bypass -n POP pane1
+netcolumns -c delscript,comment -n CHOPNET pane1
+netcolumns -c display,export,audio,bypass,lock -n CHOP pane1
+netcolumns -c startrender,bypass,lock -n ROP pane1
+netcolumns -c delscript,comment -n SHOP pane1
+netcolumns -c display,render,template,bypass -n COP2 pane1
+netcolumns -c delscript,comment -n IMG pane1
+netcolumns -c delscript,comment,input -n VOP pane1
+netcolumns -c delscript,comment -n VOPNET pane1
+netcolumns -c delscript,comment -n DOP pane1
+netcolumns -c delscript,comment -n MGR pane1
+netcolumns -c delscript,comment -n DIR pane1
+viewerstow -x open -b stow -l open -m hide -c hide -d open Creation.panetab1.world
+vieweroption -a 2 Creation.panetab1.world
+viewlayout -s 2 Creation.panetab1.world
+viewtype -t ortho_right Creation.panetab1.world.`vpname("Creation.panetab1.world",4)`
+viewtype -t ortho_front Creation.panetab1.world.`vpname("Creation.panetab1.world",3)`
+viewtype -t ortho_top Creation.panetab1.world.`vpname("Creation.panetab1.world",1)`
+viewtype -t perspective Creation.panetab1.world.`vpname("Creation.panetab1.world",2)`
+viewerstow -x open -b stow -l open -m hide -c hide -d open Creation.panetab3.world
+vieweroption -a 2 Creation.panetab3.world
+viewlayout -s 2 Creation.panetab3.world
+viewtype -t ortho_right Creation.panetab3.world.`vpname("Creation.panetab3.world",4)`
+viewtype -t ortho_front Creation.panetab3.world.`vpname("Creation.panetab3.world",3)`
+viewtype -t ortho_top Creation.panetab3.world.`vpname("Creation.panetab3.world",1)`
+viewtype -t perspective Creation.panetab3.world.`vpname("Creation.panetab3.world",2)`
